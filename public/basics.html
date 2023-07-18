@@ -1,0 +1,18 @@
+<h1>express server waiting for socket</h1>
+
+<!-- socket.io client-side script to connect to server-side socket, provides the io object -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io('http://localhost:9000'); // Add the missing colon ":" after "http"
+    console.log(socket);
+  
+    socket.on('connect', (socket) => {
+        console.log(socket.id);
+      
+    });
+
+    socket.on('messageFromServer', message=>{
+      console.log(message)
+    })
+   
+</script>
