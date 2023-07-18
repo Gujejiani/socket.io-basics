@@ -19,4 +19,9 @@ io.on('connection', (socket) => {
   console.log(socket.id, 'connected');
   // in ws we use send method and in socket.io we use emit event
   socket.emit('messageFromServer', { data: 'Welcome to the socketio server' });
+
+  socket.on('messageFromClient', message=>{
+    console.log(message)
+})
 });
+
