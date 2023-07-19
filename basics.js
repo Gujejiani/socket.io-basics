@@ -7,7 +7,7 @@ app.use(cors());
 
 app.use(express.static(__dirname + '/public'));
 
-const expressServer = app.listen(9000);
+const expressServer = app.listen(3000);
 const io = socketio(expressServer, {
   cors: {
     origin: '*', // Allow connections from any origin (replace with your specific domain in a production environment)
